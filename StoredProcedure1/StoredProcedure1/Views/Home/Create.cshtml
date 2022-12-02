@@ -1,0 +1,38 @@
+﻿@model StoredProcedure1.Models.FootBallMatch
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Registration</title>
+</head>
+<body style="text-align:center; background-color:seagreen">
+    <div>
+        <h2> FootBall League</h2>
+        <h5> Add Match Result</h5>
+
+        @using (Html.BeginForm())
+        {
+
+            @Html.LabelFor(model => model.TeamName1)
+            @Html.TextBoxFor(model => model.TeamName1)<br />
+
+            @Html.LabelFor(model => model.TeamName2)
+            @Html.TextBoxFor(model => model.TeamName2)<br />
+
+            @Html.LabelFor(model => model.Status)
+            @Html.TextBoxFor(model => model.Status)<br />
+
+            @Html.LabelFor(model => model.WinningTeam)
+            @Html.TextBoxFor(model => model.WinningTeam)<br />
+
+            @Html.LabelFor(model => model.points)
+            @Html.TextBoxFor(model => model.points)<br />
+
+            <input type="Submit" name="submit" />
+
+        }
+    </div>
+</body>
+</html>
